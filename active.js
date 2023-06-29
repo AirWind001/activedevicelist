@@ -181,7 +181,7 @@ for (let profileIndex=0; profileIndex <allProfiles.length; profileIndex++){  // 
           if( ts.length != 0){
           //console.log(index)
             //if ( timestamp - ts[0].lastUpdateTs > 86400000  ) {  // 7 zeros is 3 hours. 10000000. // 86400000 is 1 day 24 hours ( here they use milliseconds format)
-            if ( timestamp - ts[0].lastUpdateTs > 60480000   ) { // one week 
+            if ( timestamp - ts[0].lastUpdateTs >  604800000   ) { // one week 
               //console.log('device is inactive')          
               deactive++
             }
@@ -285,7 +285,7 @@ let date = "\ncode ran successfully on " + Date().toLocaleString()
 fsLibrary.appendFile('/home/pi/active_dashboard/log.txt', date, (error) => {
 
     // In case of a error throw err exception.
-    if (error) throw err;
+    // if (error) throw err;
     console.log('Saved!');
 })
 //toLocaleString()
