@@ -152,7 +152,7 @@ airG= await airG.json()
 //console.log(fan_v2.totalElements+ modv5.totalElements+ simcard.totalElements+ IGAIR.totalElements+ IGLTE.totalElements+ Fan_ACE.totalElements+ modv6fancy.totalElements+ modv6.totalElements)
 //console.log(IGLTE.data[800].id.id)
 //console.log(IGLTE.totalElements)
- var allProfiles= [IGLTE, IGAIR, modv6, modv6fancy, Fan_ACE, modv5, fan_v2, IGWifi]
+ var allProfiles= [IGLTE, IGAIR, modv6, modv6fancy, Fan_ACE, modv5, fan_v2, IGWifi, bravo, aerasgard, temco, airG]
 // var allProfiles= [ modv6fancy, Fan_ACE, modv5, fan_v2]
 var timestamp= Math.floor(new Date().getTime())
 var id, link, activeList= []
@@ -250,11 +250,12 @@ console.log("Finally, the active LIst is", activeList)
    /////////////////////////////////////////////////////////////////////////////////////////////
 //console.log("list of active devices is", activeList)
 //console.log("list of all devices is", [IGLTE, IGAIR, modv6, modv6fancy, Fan_ACE, simcard, modv5, fan_v2])
-var IGLTE_Active= activeList[0], IGAIR_Active=activeList[1], modv6_Active=activeList[2], modv6fancy_Active=activeList[3], Fan_ACE_Active=activeList[4], modv5_Active=activeList[5], fan_v2_Active=activeList[6], IGWifi_Active= activeList[7], bravo_Active=activeList[8], aerasgard_Active=activeList[9], temco_Active=activeList[10], airG_Active= activeList[11], simcard_Active=activeDevices
+var IGLTE_Active= activeList[0], IGAIR_Active=activeList[1], modv6_Active=activeList[2], modv6fancy_Active=activeList[3], Fan_ACE_Active=activeList[4], modv5_Active=activeList[5], fan_v2_Active=activeList[6], IGWifi_Active= activeList[7], bravo_Active=activeList[8], aerasgard_Active=activeList[9], temco_Active=activeList[10], airG_Active= activeList[11], simcard_Active=activeList[12]
 let total_Active= activeList.reduce((a, b) => {
   return a + b;
-});
-total_Active= total_Active+ activeDevices
+});  // sums up all elements of array
+// total_Active= total_Active+ activeDevices
+console.log("total active", total_Active)
 console.log("simcard and total active is ", IGLTE_Active, simcard_Active, total_Active)
 // var IGLTE_Active= 56, IGAIR_Active=52, modv6_Active=74, modv6fancy_Active=16, Fan_ACE_Active=91, 
 // simcard_Active=64, modv5_Active=87, fan_v2_Active=15
