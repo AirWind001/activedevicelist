@@ -14,8 +14,8 @@ try {
   const response = await fetch('https://emea5.ebmpapstneo.io/api/auth/login', {
   method: "POST",
   body: JSON.stringify({
-	"username":"arvind.raju@epneo.com",
-	"password":"ebmpapstneo1"
+	"username":"first.last@epneo.com",  // Enter your email address for EMEA5 Thingsboard account
+	"password":""  // Enter your passwword
 })})
 var token= await response.json();
   //console.log(token);
